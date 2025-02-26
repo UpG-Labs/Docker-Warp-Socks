@@ -67,7 +67,7 @@ EOF
 cat <<EOF | tee /etc/sing-box/config.json
 {
     "log": {
-        "level": "debug",
+        "level": "info",
         "timestamp": true
     },
     "experimental": {
@@ -80,19 +80,12 @@ cat <<EOF | tee /etc/sing-box/config.json
     "dns": {
         "servers": [
             {
-                "tag": "google",
-                "address": "https://dns.google/dns-query",
-                "address_resolver": "dns-direct",
-                "client_subnet": "1.0.1.0",
-                "detour": "direct-out"
-            },
-            {
                 "tag": "dns-direct",
-                "address": "udp://223.5.5.5",
+                "address": "local",
                 "detour": "direct-out"
             }
         ],
-        "final": "google",
+        "final": "dns-direct",
         "reverse_mapping": true,
         "disable_cache": false,
         "disable_expire": false
@@ -109,20 +102,6 @@ cat <<EOF | tee /etc/sing-box/config.json
             },
             {
                 "ip_is_private": true,
-                "outbound": "direct-out"
-            },
-            {
-                "ip_cidr": [
-                    "0.0.0.0/8",
-                    "10.0.0.0/8",
-                    "127.0.0.0/8",
-                    "169.254.0.0/16",
-                    "172.16.0.0/12",
-                    "192.168.0.0/16",
-                    "224.0.0.0/4",
-                    "240.0.0.0/4",
-                    "52.80.0.0/16"
-                ],
                 "outbound": "direct-out"
             }
         ],
