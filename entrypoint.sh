@@ -94,6 +94,11 @@ cat <<EOF | tee /etc/sing-box/config.json
         "rules": [
             {
                 "inbound": "mixed-in",
+                "action": "resolve",
+                "strategy": "prefer_ipv4"
+            },
+            {
+                "inbound": "mixed-in",
                 "action": "sniff"
             },
             {
