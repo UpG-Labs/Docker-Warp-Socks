@@ -3,7 +3,7 @@ FROM alpine:3.21
 LABEL maintainer="romracer <romracer@users.noreply.github.com>" \
     alpine-version="3.21.3" \
     org.opencontainers.image.title="Docker-Warp-Socks" \
-    org.opencontainers.image.description="Connet to CloudFlare WARP, exposing `socks5` proxy all together." \
+    org.opencontainers.image.description="Connect to CloudFlare WARP, exposing `socks5` proxy all together." \
     org.opencontainers.image.authors="romracer <romracer@users.noreply.github.com>" \
     org.opencontainers.image.vendor="romracer" \
     org.opencontainers.image.version="4.0.0" \
