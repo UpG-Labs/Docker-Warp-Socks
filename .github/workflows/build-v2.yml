@@ -1,5 +1,8 @@
 name: build-v2
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
   schedule:

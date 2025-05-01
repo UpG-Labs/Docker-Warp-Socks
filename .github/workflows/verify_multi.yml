@@ -1,5 +1,8 @@
 name: verify_multi
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
 

@@ -1,5 +1,9 @@
 name: build-v3
 
+permissions:
+  contents: read
+  id-token: write
+
 on:
   workflow_dispatch:
   schedule:

@@ -1,5 +1,8 @@
 name: verify-chain
 
+permissions:
+  contents: read
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   WARP_API: ${{ secrets.WARP_API_TEST_REG }}
