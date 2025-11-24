@@ -11,7 +11,7 @@ LABEL maintainer="M0nius <m0niusplus@gmail.com>" \
     org.opencontainers.image.source="https://github.com/Mon-ius/Docker-Warp-Socks" \
     org.opencontainers.image.base.name="docker.io/monius/docker-warp-socks"
 
-RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" | tee -a /etc/apk/repositories
+RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/community" | tee -a /etc/apk/repositories
 
 RUN apk update && apk upgrade \
     && apk add --no-cache curl openssl sing-box \
