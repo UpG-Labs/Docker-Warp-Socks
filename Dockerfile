@@ -11,7 +11,7 @@ LABEL maintainer="romracer <romracer@users.noreply.github.com>" \
     org.opencontainers.image.source="https://github.com/UpG-Labs/Docker-Warp-Socks" \
     org.opencontainers.image.base.name="ghcr.io/upg-labs/docker-warp-socks"
 
-RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" | tee -a /etc/apk/repositories
+RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/community" | tee -a /etc/apk/repositories
 
 RUN apk update && apk upgrade \
     && apk add --no-cache curl openssl sing-box \
