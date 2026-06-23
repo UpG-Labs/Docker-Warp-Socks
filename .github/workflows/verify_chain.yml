@@ -27,7 +27,7 @@ jobs:
       port: 9991
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - run: |
           curl -fsSL bit.ly/warp_socks | sh -s -- "$name" "linux/amd64" "v1" "$port"
           date && sleep 30 && docker ps -a && date && docker logs "$name"
@@ -45,7 +45,7 @@ jobs:
       port: 9992
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - run: |
           curl -fsSL bit.ly/warp_socks | sh -s -- "$name" "linux/amd64" "v2" "$port" "monius" "passwd"
           date && sleep 15 && docker ps -a && date && docker logs "$name"
@@ -63,7 +63,7 @@ jobs:
       port: 9993
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - run: |
           sudo docker run --name $name -e NET_PORT=$port -p $port:$port --restart=always -itd monius/docker-warp-socks:v3
           date && sleep 15 && docker ps -a && date && docker logs "$name"
@@ -81,7 +81,7 @@ jobs:
       port: 9994
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - run: |
           sudo docker run --name $name -e NET_PORT=$port -p $port:$port --restart=always -itd ghcr.io/upg-labs/docker-warp-socks:v4
           date && sleep 15 && docker ps -a && date && docker logs "$name"
